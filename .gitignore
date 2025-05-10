@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+# any file with test as start of name
+test*
+
 # C extensions
 *.so
 

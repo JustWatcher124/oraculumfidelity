@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.spyproject/
 
 # any file with test as start of name
 test*

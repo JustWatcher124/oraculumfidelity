@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 .spyproject/
-
+forbiddenlp
+synth_data/outputs/
 # any file with test as start of name
 test*
 
@@ -176,3 +177,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+

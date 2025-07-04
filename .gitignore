@@ -7,7 +7,7 @@ forbiddenlp
 synth_data/outputs/
 # any file with test as start of name
 test*
-
+dataset/*
 # C extensions
 *.so
 

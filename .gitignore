@@ -15,9 +15,9 @@ archive.zip
 *.pt
 *.h5
 *.keras
-train_models/outputs/*.png
-train_models/logs_127/*
-!train_models/logs_127/.gitkeep
+.util_train_models/outputs/*.png
+.util_train_models/logs_127/*
+!.util_train_models/logs_127/.gitkeep
 
 # Distribution / packaging
 .Python

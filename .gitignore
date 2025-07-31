@@ -15,6 +15,10 @@ archive.zip
 *.pt
 *.h5
 *.keras
+train_models/outputs/*.png
+train_models/outputs/*
+!train_models/outputs/.gitkeep
+
 # Distribution / packaging
 .Python
 build/

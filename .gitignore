@@ -8,9 +8,13 @@ synth_data/outputs/
 # any file with test as start of name
 test*
 dataset/*
+archive.zip
 # C extensions
 *.so
-
+*.pb
+*.pt
+*.h5
+*.keras
 # Distribution / packaging
 .Python
 build/

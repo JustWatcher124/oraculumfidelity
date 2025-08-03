@@ -1,4 +1,3 @@
-# import pytesseract
 import cv2
 import numpy as np
 import io
@@ -43,55 +42,6 @@ def inference(processed_img):
     decoded = decode_label(prediction)
     
     return decoded
-
-
-def inference_faking(processed_img):
-    import pytesseract 
-    pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
-    # if not isinstance(processed_img, type(np.array([1]))):
-    #     image = np.array(processed_img)
-    # else:
-    #     image = processed_img
-    # # plt.imshow()
-    # # plt.axis('off')
-    # # plt.show()
-    # gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    # edges = cv2.Canny(blurred, 100, 200)
-    # contours, _ = cv2.findContours(edges.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    # contours = sorted(contours, key=cv2.contourArea, reverse=True)
-    # plate_contour = None
-    # for contour in contours:
-    #     epsilon = 0.02 * cv2.arcLength(contour, True)
-    #     approx = cv2.approxPolyDP(contour, epsilon, True)
-        
-    #     if len(approx) == 4:
-    #         plate_contour = approx
-    #         break
-    # if plate_contour is not None:
-
-    #     x, y, w, h = cv2.boundingRect(plate_contour)
-    #     plate_image = gray[y:y + h, x:x + w]
-        
-    #     _, thresh = cv2.threshold(plate_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    # plate_number = pytesseract.image_to_string(thresh, config='--psm 8')  # Treat it as a sOingle word
-        
-    # 
-    # data = pytesseract.image_to_string(invert, lang='deu', config='--psm 6')
-    # correct_dimensioned_img = check_dimensions(processed_img)
-    # if correct_dimensioned_img is None:
-    #     return None
-    decoded = pytesseract.image_to_string(processed_img, config='--psm 8')
-    # WEIGHTS='data/model_final.weights.h5'
-    # model = model_definition()
-    # model.load_weights(WEIGHTS)
-     
-    # prediction = model.predict(correct_dimensioned_img)
-    # decoded = decode_label(prediction)
-    
-    return re.sub(r'[^a-zA-Z0-9äöüÄÖÜß ]', '', decoded)
-
-
 
 #https://keras.io/examples/image_ocr/
 #https://github.com/qjadud1994/CRNN-Keras

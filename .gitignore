@@ -13,6 +13,8 @@ archive.zip
 *.so
 *.pb
 *.pt
+!app/data/best_license_plate_model.pt
+!app/data/EDSR_x4.pb
 *.h5
 *.keras
 .util_train_models/outputs/*.png
